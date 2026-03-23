@@ -1,0 +1,108 @@
+/* ── Result Node ── */
+.result-node {
+  width: 420px;
+  background: rgba(14, 165, 233, 0.05);
+  border: 1px solid rgba(14, 165, 233, 0.22);
+  box-shadow: 0 0 0 1px rgba(14, 165, 233, 0.07),
+    0 4px 28px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  font-family: 'Inter', sans-serif;
+}
+
+.result-node:hover {
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 0 28px rgba(14, 165, 233, 0.14),
+    0 4px 28px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.result-node.is-loading {
+  border-color: rgba(14, 165, 233, 0.5);
+  animation: cyaanPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes cyaanPulse {
+  0%, 100% { box-shadow: 0 0 14px rgba(14, 165, 233, 0.12), 0 4px 28px rgba(0,0,0,0.35); }
+  50% { box-shadow: 0 0 32px rgba(14, 165, 233, 0.28), 0 4px 28px rgba(0,0,0,0.35); }
+}
+
+.result-node.has-response {
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+.result-icon {
+  background: rgba(14, 165, 233, 0.15);
+  color: #67e8f9;
+}
+
+.result-badge {
+  background: rgba(14, 165, 233, 0.13);
+  color: #67e8f9;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.result-handle {
+  background: #0ea5e9 !important;
+  border-color: rgba(103, 232, 249, 0.5) !important;
+  box-shadow: 0 0 12px rgba(14, 165, 233, 0.7) !important;
+}
+
+.result-text {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  min-height: 120px;
+  max-height: 280px;
+  overflow-y: auto;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.result-text.empty {
+  color: rgba(255, 255, 255, 0.2);
+  font-style: italic;
+}
+
+.result-text::-webkit-scrollbar { width: 4px; }
+.result-text::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.3);
+  border-radius: 2px;
+}
+
+/* Loading animation */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  gap: 14px;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.loading-dots span {
+  width: 9px;
+  height: 9px;
+  background: #0ea5e9;
+  border-radius: 50%;
+  animation: dotBounce 1.3s ease-in-out infinite;
+}
+
+.loading-dots span:nth-child(2) { animation-delay: 0.18s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes dotBounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.35; }
+  30% { transform: translateY(-13px); opacity: 1; }
+}
+
+.loading-text {
+  font-size: 12px;
+  color: rgba(14, 165, 233, 0.6);
+  letter-spacing: 0.5px;
+  margin: 0;
+}

@@ -1,0 +1,124 @@
+/* ── Shared node base ── */
+.flow-node {
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(24px);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px 11px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.node-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.node-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+}
+
+.node-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.node-body {
+  padding: 14px;
+}
+
+.node-handle {
+  width: 13px !important;
+  height: 13px !important;
+  border: 2px solid !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.node-handle:hover {
+  transform: scale(1.4) !important;
+}
+
+/* ── Input Node ── */
+.input-node {
+  width: 380px;
+  background: rgba(124, 58, 237, 0.07);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.08),
+    0 4px 28px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.input-node:hover {
+  border-color: rgba(124, 58, 237, 0.55);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.18),
+    0 4px 28px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.input-icon {
+  background: rgba(124, 58, 237, 0.2);
+  color: #a78bfa;
+}
+
+.input-badge {
+  background: rgba(124, 58, 237, 0.18);
+  color: #a78bfa;
+  border: 1px solid rgba(124, 58, 237, 0.35);
+}
+
+.input-handle {
+  background: #7c3aed !important;
+  border-color: rgba(167, 139, 250, 0.5) !important;
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.7) !important;
+}
+
+.node-textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  padding: 11px 13px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.node-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.node-textarea:focus {
+  border-color: rgba(124, 58, 237, 0.55);
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.char-count {
+  text-align: right;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.2);
+  margin-top: 6px;
+}

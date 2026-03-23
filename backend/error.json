@@ -1,0 +1,7 @@
+{
+  "error": {
+    "message": "google/gemini-2.0-flash-lite-preview-02-05:free is not a valid model ID",
+    "code": 400
+  },
+  "user_id": "user_3BJ7H5zgU1QZ6rkocagOwzzjn82"
+}
