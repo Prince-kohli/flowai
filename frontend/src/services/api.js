@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API = axios.create({ baseURL: 'https://flowai-backend-lwpj.onrender.com/api' });
 
 export const askAI = async (prompt) => {
   const { data } = await API.post('/ask-ai', { prompt });
